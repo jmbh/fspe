@@ -1,0 +1,7 @@
+exportPattern("^[[:alpha:]]+")
+
+
+export(fspe)
+
+import(psych, corpcor, GPArotation)
+importFrom("stats", "cor", "cov2cor")

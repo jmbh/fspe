@@ -1,0 +1,14 @@
+Package: fspe
+Type: Package
+Title: Estimating the number of factors in EFA with out-of-sample prediction errors
+Version: 0.1.0
+Author: Jonas Haslbeck <jonashaslbeck@gmail.com>, Riet van Bork <rietvanbork@hotmail.com>
+Maintainer: Jonas Haslbeck <jonashaslbeck@gmail.com>
+Description: Estimating the number of factors in Exploratory Factor Analysis (EFA) with out-of-sample prediction errors.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: psych, corpcor, GPArotation
+
+
+
