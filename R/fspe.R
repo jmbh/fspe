@@ -14,7 +14,7 @@ fspe <- function(data,
 
   # ----- Input checks ------
 
-  if(!(class(data) %in% c("matrix", "data.frame"))) stop("The data has to be provided as a matrix or data.frame.")
+  if(!(class(data)[1] %in% c("matrix", "data.frame"))) stop("The data has to be provided as a matrix or data.frame.")
 
 
   # ----- Check identifiability ------
@@ -126,7 +126,8 @@ fspe <- function(data,
   # ----- Prepare output ------
 
   outlist <- list("nfactor" = nfactor,
-                  "PEs" = a_foldPE)
+                  "PEs" = apply(a_foldPE, 1, mean),
+                  "PE_array" = a_foldPE)
 
   return(outlist)
 
