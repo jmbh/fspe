@@ -4,7 +4,8 @@ fspe <- function(data,
                  maxK,
                  nfold = 10,
                  rep = 1,
-                 method = "PE") {
+                 method = "PE",
+                 pbar=TRUE) {
 
 
   # ----- Get basic info ------
@@ -34,6 +35,17 @@ fspe <- function(data,
 
   # ----- Scale data ------
   data <- apply(data, 2, scale)
+
+
+  # ------ Set up progress bar ------
+
+  if(pbar==TRUE) if(rep>1) {
+    pb <- txtProgressBar(min = 0, max=rep, initial=0, char="-", style = 3)
+  } else {
+    pb <- txtProgressBar(min = 0, max=maxK_use, initial=0, char="-", style = 3)
+  }
+
+
 
   # ----- Method 1: Compute OoS PE + k-fold cross validation ------
 
@@ -68,8 +80,13 @@ fspe <- function(data,
             a_foldPE[k, f, i, r] <- mean((cv_data_test[,i]-i_pred)^2)
           } # end for i
 
+          if(pbar) if(rep==1) if(pbar==TRUE) setTxtProgressBar(pb, k)
         } # end for: k
+
       } # end for: fold
+
+      if(pbar) if(rep>1) if(pbar==TRUE) setTxtProgressBar(pb, r)
+
     } # end for : rep
 
     # ----- Obtain Aggregate Prediction ------
@@ -111,8 +128,14 @@ fspe <- function(data,
           oos_cor <- cor(cv_data_test)
           a_foldPE[k, f, r] <- mean((oos_cor - mi_cor)^2)
 
+          if(pbar) if(rep==1) if(pbar==TRUE) setTxtProgressBar(pb, k)
+
         } # end for: k
+
       } # end for: fold
+
+      if(pbar) if(rep>1) if(pbar==TRUE) setTxtProgressBar(pb, r)
+
     } # end for : rep
 
     # Aggregate

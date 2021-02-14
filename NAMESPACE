@@ -5,3 +5,4 @@ export(fspe)
 
 import(psych, corpcor, GPArotation)
 importFrom("stats", "cor", "cov2cor")
+importFrom("utils", "setTxtProgressBar", "txtProgressBar")
