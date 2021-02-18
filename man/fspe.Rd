@@ -51,7 +51,17 @@ Jonas Haslbeck <jonashaslbeck@gmail.com>
 \examples{
 \dontrun{
 
-##
+data(holzinger19)
+
+fspe_out <- fspe(holzinger19,
+                 maxK = 10,
+                 nfold = 10,
+                 method = "PE")
+
+fspe_out$nfactor # estimated factors = 4
+
+# Plot OoS PE path
+plot(fspe_out$PEs, xlab="No. Factors", ylab="OoS PE")
 
 }
 }
