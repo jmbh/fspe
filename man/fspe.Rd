@@ -41,7 +41,7 @@ The function returns:
 
 }
 \references{
-Haslbeck & van Bork (2021). Estimating the number of factors in Exploratory Factor Analysis using out-of-sample prediction errors. PsyArXiv Preprint:
+Haslbeck & van Bork (2021). Estimating the number of factors in Exploratory Factor Analysis using out-of-sample prediction errors. PsyArXiv Preprint: https://psyarxiv.com/qktsd
 }
 \author{
 Jonas Haslbeck <jonashaslbeck@gmail.com>

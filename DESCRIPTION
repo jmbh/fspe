@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Jonas Haslbeck <jonashaslbeck@gmail.com>, Riet van Bork <rietvanbork@hotmail.com>
 Maintainer: Jonas Haslbeck <jonashaslbeck@gmail.com>
 Depends: R (>= 3.5.0)
-Description: Estimating the number of factors in Exploratory Factor Analysis (EFA) with out-of-sample prediction errors using a cross-validation scheme.
+Description: Estimating the number of factors in Exploratory Factor Analysis (EFA) with out-of-sample prediction errors using a cross-validation scheme. Preprint: https://psyarxiv.com/qktsd.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
