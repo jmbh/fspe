@@ -49,7 +49,7 @@ Jonas Haslbeck <jonashaslbeck@gmail.com>
 
 
 \examples{
-\dontrun{
+\donttest{
 
 data(holzinger19)
 

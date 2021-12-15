@@ -1,11 +1,19 @@
 Package: fspe
 Type: Package
-Title: Estimating the number of factors in EFA with out-of-sample prediction errors
+Title: Estimating the Number of Factors in EFA with Out-of-Sample Prediction Errors
 Version: 0.1.0
-Author: Jonas Haslbeck <jonashaslbeck@gmail.com>, Riet van Bork <rietvanbork@hotmail.com>
-Maintainer: Jonas Haslbeck <jonashaslbeck@gmail.com>
+Authors@R: 
+  c(person(given = "Jonas",
+           family = "Haslbeck",
+           role = c("aut", "cre"),
+           email = "jonashaslbeck@gmail.com"),
+    person(given = "Riet",
+           family = "van Bork",
+           email = "rietvanbork@hotmail.com",
+           role = "ctb"))
+BugReports: https://github.com/jmbh/fspe/issues
 Depends: R (>= 3.5.0)
-Description: Estimating the number of factors in Exploratory Factor Analysis (EFA) with out-of-sample prediction errors using a cross-validation scheme. Preprint: https://psyarxiv.com/qktsd.
+Description: Estimating the number of factors in Exploratory Factor Analysis (EFA) with out-of-sample prediction errors using a cross-validation scheme. Haslbeck & van Bork (Preprint) <https://psyarxiv.com/qktsd>.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
