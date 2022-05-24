@@ -80,6 +80,11 @@ fspe <- function(data,
             a_foldPE[k, f, i, r] <- mean((cv_data_test[,i]-i_pred)^2)
           } # end for i
 
+          # DEVV:
+          # a_foldPE[4, 1, , 1]
+          # mean(a_foldPE[4, 1, , 1])
+          # hist(a_foldPE[4, 1, , 1])
+
           if(pbar) if(rep==1) if(pbar==TRUE) setTxtProgressBar(pb, k)
         } # end for: k
 
@@ -113,8 +118,8 @@ fspe <- function(data,
       id <- rep(1:nfold, times=times_n, each=1)[1:n]
       id_random <- sample(id, size=n, replace=FALSE) # shuffle
 
-      for(f in 1:nfold) {
-        for(k in 1:maxK_use) {
+      for(k in 1:maxK_use) {
+        for(f in 1:nfold) {
 
           # cv test/train split
           cv_data_train <- data[id!=f, ]

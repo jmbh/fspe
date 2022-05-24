@@ -4,10 +4,13 @@ impCov <- function(fit) {
 
   # basic info
   nfactors <- fit$factors
+
+  # number of variables
   p <- nrow(fit$loadings)
 
   # factor correlations
-  psi <- fit$r.scores # correlations between factors
+  # psi <- fit$r.scores # correlations between factors
+  if(nfactors==1) psi <- matrix(1,1,1) else psi <- fit$Phi
 
   # residual variances
   theta <- matrix(0, p, p)
