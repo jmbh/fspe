@@ -1,7 +1,7 @@
 Package: fspe
 Type: Package
 Title: Estimating the Number of Factors in EFA with Out-of-Sample Prediction Errors
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
   c(person(given = "Jonas",
            family = "Haslbeck",
