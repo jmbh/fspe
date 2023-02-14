@@ -5,7 +5,8 @@ fspe <- function(data,
                  nfold = 10,
                  rep = 1,
                  method = "PE",
-                 pbar=TRUE) {
+                 pbar=TRUE,
+                 ...) {
 
 
   # ----- Get basic info ------
