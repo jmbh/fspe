@@ -1,0 +1,2 @@
+changes in Version 0.1.2
+  o Adapted to conflicting imported functions from psych and GPArotation by removing GPArotation from dependencies

@@ -5,7 +5,9 @@ fspe <- function(data,
                  nfold = 10,
                  rep = 1,
                  method = "PE",
-                 pbar=TRUE) {
+                 rotate = "oblimin",
+                 pbar = TRUE,
+                 ...) {
 
 
   # ----- Get basic info ------
@@ -68,7 +70,7 @@ fspe <- function(data,
           cv_data_test <- data[id_random==f, ]
 
           # fit factor model
-          fit <- fa(cv_data_train, nfactors = k, rotate = "oblimin")
+          fit <- fa(cv_data_train, nfactors = k, rotate = rotate)
 
           # get model implied partial correlations
           mi_cor <- impCov(fit)
@@ -79,11 +81,6 @@ fspe <- function(data,
             i_pred <- as.matrix(cv_data_test[, -i]) %*% matrix(mi_pcor[i, -i], ncol=1)
             a_foldPE[k, f, i, r] <- mean((cv_data_test[,i]-i_pred)^2)
           } # end for i
-
-          # DEVV:
-          # a_foldPE[4, 1, , 1]
-          # mean(a_foldPE[4, 1, , 1])
-          # hist(a_foldPE[4, 1, , 1])
 
           if(pbar) if(rep==1) if(pbar==TRUE) setTxtProgressBar(pb, k)
         } # end for: k
@@ -126,7 +123,7 @@ fspe <- function(data,
           cv_data_test <- data[id==f, ]
 
           # fit factor model
-          fit <- fa(cv_data_train, nfactors = k)
+          fit <- fa(cv_data_train, nfactors = k, rotate = rotate, ...)
 
           # get model-implied cov
           mi_cor <- impCov(fit)

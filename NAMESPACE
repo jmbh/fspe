@@ -3,6 +3,7 @@ exportPattern("^[[:alpha:]]+")
 
 export(fspe)
 
-import(psych, corpcor, GPArotation)
+#import(psych, corpcor, GPArotation)
+import(psych, corpcor)
 importFrom("stats", "cor", "cov2cor")
 importFrom("utils", "setTxtProgressBar", "txtProgressBar")

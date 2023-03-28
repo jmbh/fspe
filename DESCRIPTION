@@ -1,7 +1,7 @@
 Package: fspe
 Type: Package
 Title: Estimating the Number of Factors in EFA with Out-of-Sample Prediction Errors
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
   c(person(given = "Jonas",
            family = "Haslbeck",
@@ -17,7 +17,7 @@ Description: Estimating the number of factors in Exploratory Factor Analysis (EF
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-Imports: psych, corpcor, GPArotation
+Imports: psych, corpcor
 
 
 
