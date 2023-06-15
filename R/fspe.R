@@ -17,7 +17,7 @@ fspe <- function(data,
 
   # ----- Input checks ------
 
-  if(!(class(data)[1] %in% c("matrix", "data.frame"))) stop("The data has to be provided as a matrix or data.frame.")
+  if(!inherits(data, c("matrix", "data.frame"))) stop("The data has to be provided as a matrix or data.frame.")
 
 
   # ----- Check identifiability ------
